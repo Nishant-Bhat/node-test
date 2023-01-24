@@ -1,0 +1,50 @@
+[{
+    "name":"AppMaster",
+    "type": "mysql",
+    "host": "localhost",
+    "port": 8889,
+    "username": "root",
+    "password": "root",
+    "database": "weather_db",
+    "synchronize": false,
+    "logging": false,
+    "entities": [
+	"dist/DB/entity/weather_db/*{.js,.ts}"
+    ],
+    "migrations": [
+	"src/DB/migration/**/*.ts"
+    ],
+    "subscribers": [
+	"src/DB/subscribers/**/*.ts"
+    ],
+    "cli": {
+	"entitiesDir": "src/DB/entity/weather_db",
+	"migrationsDir": "src/DB/migration",
+	"subscribersDir": "src/DB/subscribers"
+    }
+},{
+    "name":"AppSlave",
+    "type": "mysql",
+    "host": "localhost",
+    "port": 8889,
+    "username": "root",
+    "password": "root",
+    "database": "weather_db",
+    "synchronize": false,
+    "logging": false,
+    "entities": [
+	"dist/DB/entity/weather_db/*{.js,.ts}"
+    ],
+    "migrations": [
+	"src/DB/migration/**/*.ts"
+    ],
+    "subscribers": [
+	"src/DB/subscribers/**/*.ts"
+    ],
+    "cli": {
+	"entitiesDir": "src/DB/entity/weather_db",
+	"migrationsDir": "src/DB/migration",
+	"subscribersDir": "src/DB/subscribers"
+    }
+
+}]
